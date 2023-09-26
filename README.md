@@ -4,8 +4,14 @@ Proyecto creado para una prueba tecnica
 
 ## Tabla de Contenidos
 
+- [Requisitos](#requisitos)
 - [Instalación](#instalación)
 - [Uso](#uso)
+
+## Requisitos
+
+- Node version LTS
+- MongoDB Compass
 
 ## Instalación
 
@@ -38,5 +44,20 @@ La aplicacion front cuenta con un login, una vista administrador que se encarga 
 ### Back-end
 
 Para la parte del back se debe instalar mongo si es posible MongoDB Compass ayuda con un manejo de las tablas mas interactivo. Ya que mongo es una base de datos noSQL no hay manera de generar un modelo
+
+**Pasos:**
+
+- Ejecutar backsolokukos(npm run dev)
+- Ingresar a MongoDB Compass
+- Presionar Connect
+- Presionar Database llamada 'PruebaSoloKukos'
+- Presionar users
+- Presionar ADD DATA
+- Presionar Insert Document
+- Pegas este JSON: {  "nombre": "Administrador",  "usuario": "ADMI",  "password": "123",  "rol": "ADMIN"}
+- Presionar icono format se encuentra dentro de donde pegas el JSON
+- Presionar Insert
+
+  Realizando estos pasos ya puedes ejecutar el frontsolokukos(npm start) e ingresas en nombre de usuario:ADMI y contraseña:123
 
 ```bash
