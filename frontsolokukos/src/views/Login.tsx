@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { Container, Paper, Typography, Button, Grid } from "@mui/material";
+import { Container, Paper, Typography, Grid } from "@mui/material";
 
 import { StandardInput, PasswordInput, CoolButton } from "../components";
 

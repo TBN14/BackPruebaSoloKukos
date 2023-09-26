@@ -1,13 +1,11 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
 
 interface PasswordInputProps {
   value: string;
   label: string;
   name: string;
   onChange: (input: string, text: string) => void;
-  //   handleInputChange: (name: string, text: string) => void;
 }
 
 export const PasswordInput: React.FC<PasswordInputProps> = ({

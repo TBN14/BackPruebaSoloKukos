@@ -24,7 +24,6 @@ export const CoolButton: React.FC<CoolButtonProps> = ({
   loading = false,
   pressCoolButton,
 }) => {
-  // Combinar el nombre del ícono con la ubicación de los íconos en tu biblioteca
   const iconSrc = `@mui/material-icons/${iconName}`;
 
   return (

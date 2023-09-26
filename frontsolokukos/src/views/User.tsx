@@ -1,31 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Container, Grid, Typography } from "@mui/material";
-import { CoolButton, ModalProduct, ProductList } from "../components";
+import { Typography } from "@mui/material";
+import { CoolButton, ProductList } from "../components";
 import { IProduct } from "../types";
-import {
-  getProduct,
-  postProduct,
-  updateProduct,
-  deleteProduct,
-} from "../api/peticiones";
+import { getProduct } from "../api/peticiones";
 
 export const User = () => {
   const navigate = useNavigate();
   const [apiProducts, setApiProducts] = useState<IProduct[]>([]);
-  const [isEditing, setIsEditing] = useState(false);
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  const [isAddProductModalOpen, setAddProductModalOpen] = useState(false);
-  const [productData, setProductData] = useState<IProduct>({
-    _id: "",
-    nombre: "",
-    precio: 0,
-    referencia: "",
-    talla: "",
-    color: "",
-    categoria: "",
-  });
 
   const handleSignOut = () => {
     navigate("/");

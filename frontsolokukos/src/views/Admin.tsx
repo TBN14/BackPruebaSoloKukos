@@ -47,7 +47,6 @@ export const Admin = () => {
   };
 
   const handleEditProduct = (product: IProduct) => {
-    // Abre el modal de edición con los datos del producto seleccionado
     setProductData(product);
     setIsEditing(true);
     setAddProductModalOpen(true);
@@ -58,7 +57,6 @@ export const Admin = () => {
       const response = await deleteProduct(product._id);
       console.log("Producto eliminado:", response);
 
-      // Actualiza la lista de productos después de la eliminación
       const updatedProducts = await getProduct();
       setApiProducts(updatedProducts);
     } catch (error) {
@@ -67,13 +65,11 @@ export const Admin = () => {
   };
 
   const handleSaveProduct = async (formData: IProduct) => {
-    // Realiza la solicitud POST para agregar el nuevo producto
     try {
       console.log("formData :>> ", formData);
       const response = await postProduct(formData);
       console.log("Nuevo producto agregado:", response);
 
-      // Cierra el modal y actualiza la lista de productos
       setAddProductModalOpen(false);
       setProductData({
         _id: "",
